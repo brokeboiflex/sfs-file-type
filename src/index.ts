@@ -1,4 +1,4 @@
-import archieve from "./archieve";
+import archive from "./archive";
 import audio from "./audio";
 import book from "./book";
 import code from "./code";
@@ -11,11 +11,25 @@ import slide from "./slide";
 import video from "./video";
 import web from "./web";
 
+export type sfsFileType =
+  | "archieve"
+  | "audio"
+  | "book"
+  | "code"
+  | "document"
+  | "executable"
+  | "font"
+  | "image"
+  | "sheet"
+  | "slide"
+  | "video"
+  | "web";
+
 /**
  * An object mapping file categories to their respective file extension arrays.
  */
 export const fileExtensions = {
-  archieve,
+  archive,
   audio,
   book,
   code,
