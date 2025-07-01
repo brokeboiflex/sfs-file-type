@@ -21,8 +21,8 @@
     "build": "microbundle",
     "dev": "microbundle watch"
   },
-  "license": "ISC",
   "devDependencies": {
     "microbundle": "^0.15.1"
-  }
+  },
+  "license": "ISC"
 }
