@@ -50,12 +50,12 @@ export const fileExtensions = {
  * @param extension - The file extension string, including the leading dot (e.g., ".jpg").
  * @returns The type name as a string if found, otherwise "other".
  */
-export function dotExtensionToCategotry(extension: string) {
+export function dotExtensionToCategotry(extension: string): sfsFileType {
   const type = Object.keys(fileExtensions).find((key) =>
     // @ts-ignore
     fileExtensions[key].includes(extension.substring(1))
   );
-  return type ? (type as sfsFileType) : ("other" as sfsFileType);
+  return type ? (type as sfsFileType) : "other";
 }
 
 /**
@@ -64,10 +64,10 @@ export function dotExtensionToCategotry(extension: string) {
  * @param extension - The file extension string without the leading dot (e.g., "jpg").
  * @returns The type name as a string if found, otherwise "other".
  */
-export function extensionToCategotry(extension: string) {
+export function extensionToCategotry(extension: string): sfsFileType {
   const type = Object.keys(fileExtensions).find((key) =>
     //@ts-ignore
     fileExtensions[key].includes(extension)
   );
-  return type ? (type as sfsFileType) : ("other" as sfsFileType);
+  return type ? (type as sfsFileType) : "other";
 }
