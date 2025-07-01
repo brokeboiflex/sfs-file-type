@@ -23,7 +23,8 @@ export type sfsFileType =
   | "sheet"
   | "slide"
   | "video"
-  | "web";
+  | "web"
+  | "other";
 
 /**
  * An object mapping file categories to their respective file extension arrays.
@@ -54,7 +55,7 @@ export function dotExtensionToCategotry(extension: string) {
     // @ts-ignore
     fileExtensions[key].includes(extension.substring(1))
   );
-  return type ? type : "other";
+  return type ? (type as sfsFileType) : ("other" as sfsFileType);
 }
 
 /**
@@ -68,5 +69,5 @@ export function extensionToCategotry(extension: string) {
     //@ts-ignore
     fileExtensions[key].includes(extension)
   );
-  return type ? type : "other";
+  return type ? (type as sfsFileType) : ("other" as sfsFileType);
 }

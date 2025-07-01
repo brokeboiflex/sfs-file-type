@@ -1,5 +1,3 @@
-*.ts
-*.map
 node_modules/
 test/
 __tests__/

@@ -1,6 +1,6 @@
 {
   "name": "sfs-file-type",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "File type mappings for SFS",
   "author": "brokeboiflex",
   "keywords": [
@@ -13,9 +13,9 @@
   "unpkg": "./dist/index.umd.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    "types": "./dist/index.d.ts",
+    "import": "./dist/index.esm.js",
     "require": "./dist/index.cjs",
-    "default": "./dist/index.esm.js"
+    "types": "./dist/index.d.ts"
   },
   "scripts": {
     "build": "microbundle",
